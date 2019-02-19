@@ -4,4 +4,4 @@ Based on https://astadiaemea.wordpress.com/2010/06/21/15-or-18-character-ids-in-
 
 
 <Strong>Usage</Strong><br/>
-SF_ID.isValid('a020K00000vWEnKQAW')
+SF_ID.isValid('a020K00000vWEnKQAW');
