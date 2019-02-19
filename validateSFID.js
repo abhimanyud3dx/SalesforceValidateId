@@ -33,16 +33,15 @@
     keyCode['11110'] = '4';
     keyCode['11111'] = '5';
 
-    function validateId(id) {
-        if (id.length != 18) {
+    function validateId(str) {
+        if (str.length != 18) {
             return false;
         }
-        var str = id;
         var checksum = str.substring(15, 18);
-        res = convertToBinary(str.substring(0, 5).split('').reverse().join(''));
-        res1 = convertToBinary(str.substring(5, 10).split('').reverse().join(''));
-        res2 = convertToBinary(str.substring(10, 15).split('').reverse().join(''));
-        code = keyCode[res] + keyCode[res1] + keyCode[res2];
+        var res = convertToBinary(str.substring(0, 5).split('').reverse().join(''));
+        var res1 = convertToBinary(str.substring(5, 10).split('').reverse().join(''));
+        var res2 = convertToBinary(str.substring(10, 15).split('').reverse().join(''));
+        var code = keyCode[res] + keyCode[res1] + keyCode[res2];
         return code == checksum;
     }
 
